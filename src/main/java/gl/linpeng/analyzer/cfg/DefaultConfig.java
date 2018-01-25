@@ -44,9 +44,9 @@ public class DefaultConfig implements Configuration {
 	private static final String PATH_DIC_MAIN = "gl/linpeng/analyzer/dic/disease.dic";
 	private static final String PATH_DIC_QUANTIFIER = "gl/linpeng/analyzer/dic/quantifier.dic";
 
-	private static final String PATH_DICT_ADVERB = "com/linpeng/analyzer/dic/adverb.dic";
-	private static final String PATH_DICT_FOOD = "com/linpeng/analyzer/dic/food.dic";
-	private static final String PATH_DICT_NATRIENT = "com/linpeng/analyzer/dic/natrient.dic";
+	private static final String PATH_DICT_ADVERB = "gl/linpeng/analyzer/dic/adverb.dic";
+	private static final String PATH_DICT_FOOD = "gl/linpeng/analyzer/dic/food.dic";
+	private static final String PATH_DICT_NATRIENT = "gl/linpeng/analyzer/dic/natrient.dic";
 	/*
 	 * 分词器配置文件路径
 	 */
