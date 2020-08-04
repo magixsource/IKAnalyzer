@@ -23,7 +23,7 @@ jobs:
     - name: config setting.xml
       uses: whelk-io/maven-settings-xml-action@v10
       with:
-        repositories: '[{ "id": "geek-snapshots", "name": "Ali Private Snapshot Repository", "url": "https://packages.aliyun.com/maven/repository/2012569-snapshot-C6Wvk0/", "releases": { "enabled": "false" }, "snapshots": { "enabled": "true" } },{ "id": "geek-releases", "name": "Ali Private Release Repository", "url": "https://packages.aliyun.com/maven/repository/2012569-release-howX4t/", "releases": { "enabled": "true" }, "snapshots": { "enabled": "false" } }]'
         servers: '[{ "id": "geek-snapshots", "username": "${{ secrets.GEEK_REPO_USERNAME }}", "password": "${{ secrets.GEEK_REPO_SECRET }}" }]'
+        profiles: '[{ "id": "geek", "name": "geek", "repositories":[{ "id": "geek-snapshots", "name": "Ali Private Snapshot Repository", "url": "https://packages.aliyun.com/maven/repository/2012569-snapshot-C6Wvk0/", "releases": { "enabled": "false" }, "snapshots": { "enabled": "true" } },{ "id": "geek-releases", "name": "Ali Private Release Repository", "url": "https://packages.aliyun.com/maven/repository/2012569-release-howX4t/", "releases": { "enabled": "true" }, "snapshots": { "enabled": "false" } }] }]'
     - name: Deploy to aliyun
-      run: mvn -B deploy -P github --file pom.xml
+      run: mvn -B deploy -P geek --file pom.xml
