@@ -81,18 +81,20 @@
 	</build>
 	<distributionManagement>
 		<snapshotRepository>
-			<id>ossrh</id>
-			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+		    <id>geek-snapshots</id>
+                    <name>Ali Private Snapshot Repository</name>
+                    <url>https://packages.aliyun.com/maven/repository/2012569-snapshot-C6Wvk0/</url>
 		</snapshotRepository>
 		<repository>
-			<id>ossrh</id>
-			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+		    <id>geek-releases</id>
+                    <name>Ali Private Release Repository</name>
+                    <url>https://packages.aliyun.com/maven/repository/2012569-release-howX4t/</url>
 		</repository>
 	</distributionManagement>
 
 	<profiles>
 		<profile>
-			<id>release</id>
+			<id>geek</id>
 			<build>
 				<plugins>
 					<plugin>
@@ -101,8 +103,8 @@
 						<version>1.6.3</version>
 						<extensions>true</extensions>
 						<configuration>
-							<serverId>ossrh</serverId>
-							<nexusUrl>https://oss.sonatype.org/</nexusUrl>
+							<serverId>geek-snapshots</serverId>
+							<nexusUrl>https://packages.aliyun.com/maven/repository/2012569-snapshot-C6Wvk0/</nexusUrl>
 							<autoReleaseAfterClose>true</autoReleaseAfterClose>
 						</configuration>
 					</plugin>
