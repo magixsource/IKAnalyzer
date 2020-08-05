@@ -97,17 +97,17 @@
 			<id>geek</id>
 			<build>
 				<plugins>
-					<plugin>
-						<groupId>org.sonatype.plugins</groupId>
-						<artifactId>nexus-staging-maven-plugin</artifactId>
-						<version>1.6.3</version>
-						<extensions>true</extensions>
-						<configuration>
-							<serverId>geek-snapshots</serverId>
-							<nexusUrl>https://packages.aliyun.com/maven/repository/2012569-snapshot-C6Wvk0/</nexusUrl>
-							<autoReleaseAfterClose>true</autoReleaseAfterClose>
-						</configuration>
-					</plugin>
+<!--					<plugin>-->
+<!--						<groupId>org.sonatype.plugins</groupId>-->
+<!--						<artifactId>nexus-staging-maven-plugin</artifactId>-->
+<!--						<version>1.6.3</version>-->
+<!--						<extensions>true</extensions>-->
+<!--						<configuration>-->
+<!--							<serverId>geek-snapshots</serverId>-->
+<!--							<nexusUrl>https://packages.aliyun.com/maven/repository/2012569-snapshot-C6Wvk0/</nexusUrl>-->
+<!--							<autoReleaseAfterClose>true</autoReleaseAfterClose>-->
+<!--						</configuration>-->
+<!--					</plugin>-->
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-release-plugin</artifactId>
